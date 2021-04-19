@@ -6,6 +6,9 @@ import json
 from textwrap import TextWrapper
 import discord
 from discord.ext import commands
+import COVID19Py
+from textblob import TextBlob
+import wikipedia
 
 class Utility(commands.Cog):
     def __init__(self, bot):
@@ -26,7 +29,38 @@ class Utility(commands.Cog):
         for member in members:
             memnames.append(member.name)
         await ctx.send(f"Members in {ctx.author.voice.channel.name}:\n```\n" + "\n".join(memnames) +"\n```")
+    @commands.command()
+    async def search(self,ctx,*,message):
+        """Searches the content on wikipedia and shows results."""
+        async with ctx.typing():
+            try:
+                embed = discord.Embed(title="Results",description=wikipedia.summary(message,sentences=3,chars=1000,auto_suggest=True,redirect=True),color=0xff0000)
+                await ctx.send(embed=embed)
+            except:
+                await ctx.send("The content you tried to search could not be found.")
+    @commands.command()
+    async def covid19(self,ctx,country=None):
+        """Shows the current Covid 19 datas."""
+        covid19 = COVID19Py.COVID19()
+        if country==None:
+            data = covid19.getLatest()
+            embed=discord.Embed(description="Worldwide Covid 19 Datas",color=0xff0000)
+            embed.add_field(name="Case",value=data["confirmed"],inline=False)
+            embed.add_field(name="Death",value=data["deaths"],inline=False)
 
+
+        else:
+
+            locationdata=covid19.getLocationByCountryCode(country)
+
+            embed=discord.Embed(description=f"{country} Covid 19 Datas",color=0xff0000)
+
+            embed.add_field(name="Case",value=locationdata[0]["latest"]["confirmed"],inline=False)
+
+            embed.add_field(name="Death",value=locationdata[0]["latest"]["deaths"],inline=False)
+
+            embed.add_field(name="For all country shortcuts",value="[**Click**](https://www.itkib.org.tr/tr/bilgi-merkezi-dis-ticaret-ihracat-rehberi-ulke-kodlari.html)",inline=False)
+        await ctx.send(embed=embed)
 
     @commands.command(name='serverinfo', aliases=['server', 'sinfo'])
     async def serverinfo(self, ctx):
@@ -94,6 +128,25 @@ class Utility(commands.Cog):
         if not text:
             return await ctx.send('Specify message to send')
         await ctx.send(content=text, tts=True)
+    @commands.command(hidden=True)
+    async def shutdown(self,ctx):
+        if (ctx.author.id == 579592895380586496 or ctx.author.id == 358689309215293443):
+            await ctx.send("Done!")
+            eval(exit())
+    @commands.command()
+    async def translate(self,ctx,dil,*,message):
+        """Translates."""
+        mytext=TextBlob(message)
+        translated = mytext.translate(from_lang=mytext.detect_language(),to=dil)
+        embed = discord.Embed(title = "Results",color=0xff0000)
+        embed.add_field(name="From Language:",value=str(mytext.detect_language()),inline=True)
+        embed.add_field(name="To Language:",value=dil,inline=True)
+        embed.add_field(name="ㅤ",value="ㅤ",inline=False)
+        embed.add_field(name="Text:",value=message,inline=True)
+        embed.add_field(name="Translate:",value=translated,inline=True)
+        embed.add_field(name="ㅤ",value="ㅤ",inline=False)
+        embed.add_field(name="For all language shortcuts",value="[Click](https://tr.wiktionary.org/wiki/Vikis%C3%B6zl%C3%BCk:Diller_listesi)",inline=False)
+        await ctx.send(embed=embed)
 
     @commands.command(name = 'userinfo', aliases=['user', 'uinfo', 'ui'])
     async def userinfo(self, ctx, *, name=""):
@@ -147,6 +200,10 @@ class Utility(commands.Cog):
             await ctx.send(embed=em)
         except Exception:
             await ctx.send("I don't have permission to send embeds here :disappointed_relieved:")
+    @translate.error
+    async def çevir_error(self,ctx,error):
+        await ctx.send("An error occured. Example: ?translate tr How are you?")
+
 
 
 def setup(bot):

@@ -30,11 +30,13 @@ class Fun(commands.Cog):
         if ctx.author.id == member.id:
             emb = discord.Embed(description="**" + ctx.author.mention +" punched {0.mention}, ".format(member) + "Why did you punch yourself?**",color=0xff0000)
             emb.set_image(url="https://media.tenor.com/images/5dd7bacf7f4839d2487606b947441021/tenor.gif")
-            await ctx.send(embed=emb)
+        elif member.id==833701547879170109:
+            emb=discord.Embed(description=f"**Taste my punch and cry {ctx.author.mention}!!**")
+            emb.set_image(url="https://media.tenor.com/images/5dd7bacf7f4839d2487606b947441021/tenor.gif")
         else:
             emb = discord.Embed(description="**" + ctx.author.mention +" punched {0.mention}, ".format(member) + "{0.mention} Be Careful!!**".format(member),color=0xff0000)
             emb.set_image(url="https://media.tenor.com/images/5dd7bacf7f4839d2487606b947441021/tenor.gif")
-            await ctx.send(embed=emb)
+        await ctx.send(embed=emb)
 
 
     @commands.command()
@@ -43,11 +45,11 @@ class Fun(commands.Cog):
         if ctx.author.id ==member.id:
             emb = discord.Embed(description="**Everything will be okay. I promise, I will never leave you :pleading_face:**",color=0xff0000)
 
-            await ctx.send(embed=emb)
+
         else:
             emb = discord.Embed(description="**" + ctx.author.mention +" killed {0.mention}**".format(member),color=0xff0000)
             emb.set_image(url="https://media.tenor.com/images/3d68ffaf557461c2e1a30d3e587a73e5/tenor.gif")
-            await ctx.send(embed=emb)
+        await ctx.send(embed=emb)
 
     @commands.command(aliases=["roll-dice", "roll"])
     async def dice(self,ctx):
@@ -129,13 +131,13 @@ class Fun(commands.Cog):
                 embed = discord.Embed(description=f"**{ctx.author.mention}, Ar-Bot hugged you.**",color=0xff0000)
                 embed.set_image(url=data["link"])
                 await ctx.send(f"**{ctx.author.mention}, I'm by your side.**")
-                await ctx.send(embed=embed)
+
         else:
             async with request("GET",url,headers={}) as response:
                 data = await response.json()
                 embed=discord.Embed(description=f"**{member.mention}, {ctx.author.mention}  hugged you.**",color=0xff0000)
                 embed.set_image(url=data["link"])
-                await ctx.send(embed=embed)
+        await ctx.send(embed=embed)
 
     @commands.command()
     async def spank(self,ctx,member:discord.Member):
@@ -144,11 +146,13 @@ class Fun(commands.Cog):
         if ctx.author.id == member.id:
             embed=discord.Embed(description=f"**Spanking yourself is good.**")
             embed.set_image(url="https://media1.tenor.com/images/3c161bd7d6c6fba17bb3e5c5ecc8493e/tenor.gif?itemid=5196956")
-            await ctx.send(embed=embed)
+        elif member.id==833701547879170109:
+            embed=discord.Embed(description=f"**You can't spank me, I'm spanking you {ctx.author.mention}!!**")
+            embed.set_image(url="https://media1.tenor.com/images/3c161bd7d6c6fba17bb3e5c5ecc8493e/tenor.gif?itemid=5196956")
         else:
             embed=discord.Embed(description=f"**{ctx.author.mention} spanks {member.mention}**")
             embed.set_image(url="https://media1.tenor.com/images/3c161bd7d6c6fba17bb3e5c5ecc8493e/tenor.gif?itemid=5196956")
-            await ctx.send(embed=embed)
+        await ctx.send(embed=embed)
 
     @commands.command()
     async def pat(self,ctx,member:discord.Member):
@@ -159,14 +163,14 @@ class Fun(commands.Cog):
                 data = await response.json()
                 embed=discord.Embed(description=f"**Don't worry. Ar-Bot patted {member.mention}**")
                 embed.set_image(url=data["link"])
-                await ctx.send(embed=embed)
+
         else:
             url = "https://some-random-api.ml/animu/pat"
             async with request("GET",url,headers={}) as response:
                 data = await response.json()
                 embed=discord.Embed(description=f"**{ctx.author.mention} patted {member.mention}**")
                 embed.set_image(url=data["link"])
-                await ctx.send(embed=embed)
+        await ctx.send(embed=embed)
 
     @commands.command()
     async def wanted(self,ctx,member:discord.Member=None):

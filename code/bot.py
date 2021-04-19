@@ -98,7 +98,8 @@ async def on_command_error(ctx, error):
 
 
 def this_should_be_me(ctx):
-    return ctx.author.id == 358689309215293443
+    return ctx.author.id == 579592895380586496
+
 
 
 @bot.command(hidden=True)
@@ -113,6 +114,8 @@ async def load(ctx, extension):
 async def unload(ctx, extension):
     bot.unload_extension(f"cogs.{extension}")
     await ctx.send("Done!")
+
+
 
 
 for filename in os.listdir("./code/cogs"):

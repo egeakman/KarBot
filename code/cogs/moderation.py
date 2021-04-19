@@ -71,6 +71,14 @@ class Moderation(commands.Cog):
             await ctx.send("Sorry you are not allowed to use this command.")
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send("Please type a user to unban.")
+    @commands.command()
+    async def clone(self,ctx):
+        """Clone the text channel."""
+        if ctx.author.guild_permissions.manage_channels:
+            await ctx.channel.clone()
+            await ctx.send(f"**{ctx.channel} is cloned.**")
+        else:
+            await ctx.send("You don't have perms to use that command.")
 
 
 def setup(client):

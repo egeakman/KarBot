@@ -1,0 +1,424 @@
+2021-04-20 01:28:17.923  INFO 11964 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.3.2.5
+	Build:          1222
+	Build time:     11.04.2021 08:07:27 UTC
+	Branch          master
+	Commit:         7b914f2
+	Commit time:    09.04.2021 17:14:27 UTC
+	JVM:            16
+	Lavaplayer      1.3.76
+
+2021-04-20 01:28:18.007  INFO 11964 --- [main] lavalink.server.Launcher                 : Starting Launcher on DESKTOP-898KCHC with PID 11964 (D:\KarBot\KarBot\Lavalink.jar started by ardas in D:\KarBot\KarBot)
+2021-04-20 01:28:18.008  INFO 11964 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2021-04-20 01:28:18.116  WARN 11964 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-04-20 01:28:18.903  WARN 11964 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-04-20 01:28:18.931  INFO 11964 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2021-04-20 01:28:18.931  INFO 11964 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 880 ms
+2021-04-20 01:28:19.203  WARN 11964 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2021-04-20 01:28:19.414  INFO 11964 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2021-04-20 01:28:19.585  INFO 11964 --- [main] lavalink.server.config.KoeConfiguration  : OS: Windows 10, Arch: amd64
+2021-04-20 01:28:19.585  WARN 11964 --- [main] lavalink.server.config.KoeConfiguration  : This system and architecture appears to not support native audio sending! GC pauses may cause your bot to stutter during playback.
+2021-04-20 01:28:19.761  INFO 11964 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-20 01:28:19.961  INFO 11964 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2021-04-20 01:28:19.971  INFO 11964 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2021-04-20 01:28:20.024  INFO 11964 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2021-04-20 01:28:20.028  INFO 11964 --- [main] lavalink.server.Launcher                 : Started Launcher in 2.492 seconds (JVM running for 2.83)
+2021-04-20 01:28:20.029  INFO 11964 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/Frederikam/Lavalink/issues/295
+2021-04-20 01:28:27.828  INFO 11964 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-20 01:28:27.829  INFO 11964 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-20 01:28:27.836  INFO 11964 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2021-04-20 01:28:27.859  INFO 11964 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60438
+2021-04-20 01:28:27.904  INFO 11964 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60438
+2021-04-20 01:28:41.105  INFO 11964 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:ege akman 2. dünya savaþý"
+2021-04-20 01:28:41.375  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op": "voiceUpdate", "guildId": "830907252302544936", "sessionId": "126f358eba4f36d1e038a843f160c51f", "event": {"token": "81ce1e105997dcbb", "guild_id": "830907252302544936", "endpoint": "eu-central1084.discord.media:443"}}
+2021-04-20 01:28:42.169  INFO 11964 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: ege akman 2. dünya savaþý
+2021-04-20 01:28:42.536  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op": "play", "guildId": "830907252302544936", "track": "QAAAgQIAHjIuIETDvG55YSBTYXZhxZ/EsSB2ZSBUw7xya2l5ZQAJRWdlIEFrbWFuAAAAAAALYhAAC3lCS04tbHFQRWhRAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9eUJLTi1scVBFaFEAB3lvdXR1YmUAAAAAAAAAAA==", "noReplace": false, "startTime": "0"}
+2021-04-20 01:29:00.208  INFO 11964 --- [XNIO-1 task-4] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:otus biy 1 saat"
+2021-04-20 01:29:00.686  INFO 11964 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: otus biy 1 saat
+2021-04-20 01:29:07.806  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op": "stop", "guildId": "830907252302544936"}
+2021-04-20 01:29:07.809  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op": "play", "guildId": "830907252302544936", "track": "QAAAjQIAJ0J1cmFrIHJlaXMgY8O8Y2UgMXNhYXQgMzEgZGl5b3IgKDFzYWF0KQAMQWxpIEFiIEVkaXRzAAAAAAA29lAAC2ZidlU2NDVYR2dvAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9ZmJ2VTY0NVhHZ28AB3lvdXR1YmUAAAAAAAAAAA==", "noReplace": false, "startTime": "0"}
+2021-04-20 01:30:03.899  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op": "stop", "guildId": "830907252302544936"}
+2021-04-20 01:30:03.900  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op": "destroy", "guildId": "830907252302544936"}
+2021-04-20 01:30:49.622  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60438 -- CloseStatus[code=1006, reason=]
+2021-04-20 01:30:49.623  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 01:30:54.331  INFO 11964 --- [XNIO-1 task-6] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60456
+2021-04-20 01:30:54.338  INFO 11964 --- [XNIO-1 task-6] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60456
+2021-04-20 01:31:03.851  INFO 11964 --- [XNIO-1 task-7] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:ege akman 2. dünya savaþý"
+2021-04-20 01:31:04.115  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op": "voiceUpdate", "guildId": "830907252302544936", "sessionId": "c3a513f527506aa5d96174606ca3fce2", "event": {"token": "c00af234898c5394", "guild_id": "830907252302544936", "endpoint": "eu-central1084.discord.media:443"}}
+2021-04-20 01:31:04.462  INFO 11964 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: ege akman 2. dünya savaþý
+2021-04-20 01:31:04.702  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op": "play", "guildId": "830907252302544936", "track": "QAAAgQIAHjIuIETDvG55YSBTYXZhxZ/EsSB2ZSBUw7xya2l5ZQAJRWdlIEFrbWFuAAAAAAALYhAAC3lCS04tbHFQRWhRAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9eUJLTi1scVBFaFEAB3lvdXR1YmUAAAAAAAAAAA==", "noReplace": false, "startTime": "0"}
+2021-04-20 01:31:08.364  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op": "stop", "guildId": "830907252302544936"}
+2021-04-20 01:31:08.365  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op": "destroy", "guildId": "830907252302544936"}
+2021-04-20 01:33:04.942  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60456 -- CloseStatus[code=1006, reason=]
+2021-04-20 01:33:04.942  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 01:33:19.454  INFO 11964 --- [XNIO-1 task-9] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60676
+2021-04-20 01:33:19.459  INFO 11964 --- [XNIO-1 task-9] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60676
+2021-04-20 01:33:41.965  INFO 11964 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60676 -- CloseStatus[code=1006, reason=]
+2021-04-20 01:33:41.965  INFO 11964 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 01:33:47.218  INFO 11964 --- [XNIO-1 task-10] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60682
+2021-04-20 01:33:47.221  INFO 11964 --- [XNIO-1 task-10] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60682
+2021-04-20 01:34:13.963  INFO 11964 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60682 -- CloseStatus[code=1006, reason=]
+2021-04-20 01:34:13.963  INFO 11964 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 01:34:19.146  INFO 11964 --- [XNIO-1 task-11] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60688
+2021-04-20 01:34:19.150  INFO 11964 --- [XNIO-1 task-11] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60688
+2021-04-20 01:35:47.717  INFO 11964 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60688 -- CloseStatus[code=1006, reason=]
+2021-04-20 01:35:47.717  INFO 11964 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 01:35:53.472  INFO 11964 --- [XNIO-1 task-12] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60698
+2021-04-20 01:35:53.476  INFO 11964 --- [XNIO-1 task-12] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60698
+2021-04-20 01:35:57.274  INFO 11964 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60698 -- CloseStatus[code=1006, reason=]
+2021-04-20 01:35:57.275  INFO 11964 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 01:36:55.098  INFO 11964 --- [XNIO-1 task-13] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60709
+2021-04-20 01:36:55.102  INFO 11964 --- [XNIO-1 task-13] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60709
+2021-04-20 01:37:30.417  INFO 11964 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60709 -- CloseStatus[code=1006, reason=]
+2021-04-20 01:37:30.418  INFO 11964 --- [XNIO-1 I/O-5] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 01:38:38.159  INFO 11964 --- [XNIO-1 task-14] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60725
+2021-04-20 01:38:38.162  INFO 11964 --- [XNIO-1 task-14] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60725
+2021-04-20 01:38:47.113  INFO 11964 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60725 -- CloseStatus[code=1006, reason=]
+2021-04-20 01:38:47.114  INFO 11964 --- [XNIO-1 I/O-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 01:38:51.869  INFO 11964 --- [XNIO-1 task-15] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60732
+2021-04-20 01:38:51.872  INFO 11964 --- [XNIO-1 task-15] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60732
+2021-04-20 01:39:16.923  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60732 -- CloseStatus[code=1006, reason=]
+2021-04-20 01:39:16.923  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 01:39:21.601  INFO 11964 --- [XNIO-1 task-16] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60740
+2021-04-20 01:39:21.607  INFO 11964 --- [XNIO-1 task-16] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60740
+2021-04-20 01:41:38.902  INFO 11964 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60740 -- CloseStatus[code=1006, reason=]
+2021-04-20 01:41:38.903  INFO 11964 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 01:42:32.450  INFO 11964 --- [XNIO-1 task-17] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60759
+2021-04-20 01:42:32.453  INFO 11964 --- [XNIO-1 task-17] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60759
+2021-04-20 01:43:07.834  INFO 11964 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60759 -- CloseStatus[code=1006, reason=]
+2021-04-20 01:43:07.835  INFO 11964 --- [XNIO-1 I/O-3] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 01:43:13.256  INFO 11964 --- [XNIO-1 task-18] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60765
+2021-04-20 01:43:13.260  INFO 11964 --- [XNIO-1 task-18] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60765
+2021-04-20 01:43:34.660  INFO 11964 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60765 -- CloseStatus[code=1006, reason=]
+2021-04-20 01:43:34.660  INFO 11964 --- [XNIO-1 I/O-3] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 01:43:41.762  INFO 11964 --- [XNIO-1 task-19] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60771
+2021-04-20 01:43:41.766  INFO 11964 --- [XNIO-1 task-19] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60771
+2021-04-20 01:43:44.661  INFO 11964 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60771 -- CloseStatus[code=1006, reason=]
+2021-04-20 01:43:44.662  INFO 11964 --- [XNIO-1 I/O-3] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 01:45:28.742  INFO 11964 --- [XNIO-1 task-20] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60780
+2021-04-20 01:45:28.746  INFO 11964 --- [XNIO-1 task-20] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60780
+2021-04-20 01:45:43.722  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60780 -- CloseStatus[code=1006, reason=]
+2021-04-20 01:45:43.723  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 01:45:48.814  INFO 11964 --- [XNIO-1 task-21] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60786
+2021-04-20 01:45:48.817  INFO 11964 --- [XNIO-1 task-21] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60786
+2021-04-20 01:47:58.024  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60786 -- CloseStatus[code=1006, reason=]
+2021-04-20 01:47:58.024  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 01:48:02.660  INFO 11964 --- [XNIO-1 task-22] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60795
+2021-04-20 01:48:02.663  INFO 11964 --- [XNIO-1 task-22] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60795
+2021-04-20 01:48:17.760  INFO 11964 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60795 -- CloseStatus[code=1006, reason=]
+2021-04-20 01:48:17.761  INFO 11964 --- [XNIO-1 I/O-3] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 01:48:28.636  INFO 11964 --- [XNIO-1 task-23] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60801
+2021-04-20 01:48:28.639  INFO 11964 --- [XNIO-1 task-23] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60801
+2021-04-20 01:48:50.834  INFO 11964 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60801 -- CloseStatus[code=1006, reason=]
+2021-04-20 01:48:50.835  INFO 11964 --- [XNIO-1 I/O-3] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 01:55:48.712  INFO 11964 --- [XNIO-1 task-24] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60921
+2021-04-20 01:55:48.715  INFO 11964 --- [XNIO-1 task-24] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60921
+2021-04-20 01:56:26.171  INFO 11964 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60921 -- CloseStatus[code=1006, reason=]
+2021-04-20 01:56:26.171  INFO 11964 --- [XNIO-1 I/O-3] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 01:56:31.584  INFO 11964 --- [XNIO-1 task-25] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60929
+2021-04-20 01:56:31.587  INFO 11964 --- [XNIO-1 task-25] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60929
+2021-04-20 01:57:04.888  INFO 11964 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60929 -- CloseStatus[code=1006, reason=]
+2021-04-20 01:57:04.889  INFO 11964 --- [XNIO-1 I/O-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 01:57:09.603  INFO 11964 --- [XNIO-1 task-26] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60948
+2021-04-20 01:57:09.607  INFO 11964 --- [XNIO-1 task-26] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60948
+2021-04-20 01:58:05.973  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60948 -- CloseStatus[code=1006, reason=]
+2021-04-20 01:58:05.973  INFO 11964 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 02:02:32.475  INFO 11964 --- [XNIO-1 task-27] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60967
+2021-04-20 02:02:32.478  INFO 11964 --- [XNIO-1 task-27] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60967
+2021-04-20 02:02:50.033  INFO 11964 --- [XNIO-1 task-28] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:annen"
+2021-04-20 02:02:50.295  INFO 11964 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"op": "voiceUpdate", "guildId": "830907252302544936", "sessionId": "2fb4ec0018d9c90801cf7cd9891105cc", "event": {"token": "70519d4a9902765e", "guild_id": "830907252302544936", "endpoint": "eu-central6087.discord.media:443"}}
+2021-04-20 02:03:09.254 ERROR 11964 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.p.DefaultAudioPlayerManager      : Error in loading item ytsearch:annen
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Something went wrong when looking up the track
+	at com.sedmelluq.discord.lavaplayer.tools.ExceptionTools.wrapUnfriendlyExceptions(ExceptionTools.java:44) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.dispatchItemLoadFailure(DefaultAudioPlayerManager.java:236) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:225) ~[lavaplayer-1.3.76.jar!/:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
+  lavaplayer.version: 1.3.76
+  os.arch: amd64
+  os.name: Windows 10
+  os.version: 10.0
+  java.vendor: Oracle Corporation
+  java.version: 16
+  java.runtime.version: 16+36-2231
+  java.vm.version: 16+36-2231
+Caused by: java.lang.RuntimeException: javax.net.ssl.SSLException: Connection reset
+	at com.sedmelluq.discord.lavaplayer.tools.ExceptionTools.wrapUnfriendlyExceptions(ExceptionTools.java:58) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeSearchProvider.loadSearchResult(YoutubeSearchProvider.java:74) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager$LoadingRoutes.search(YoutubeAudioSourceManager.java:262) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager$LoadingRoutes.search(YoutubeAudioSourceManager.java:228) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeLinkRouter.route(DefaultYoutubeLinkRouter.java:35) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadItemOnce(YoutubeAudioSourceManager.java:196) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadItem(YoutubeAudioSourceManager.java:131) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
+	... 4 common frames omitted
+Caused by: javax.net.ssl.SSLException: Connection reset
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:127) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:369) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:312) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:307) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1689) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1063) ~[na:na]
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeSearchProvider.loadSearchResult(YoutubeSearchProvider.java:67) ~[lavaplayer-1.3.76.jar!/:na]
+	... 12 common frames omitted
+	Suppressed: java.net.SocketException: Connection reset by peer
+		at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:420) ~[na:na]
+		at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440) ~[na:na]
+		at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:826) ~[na:na]
+		at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1045) ~[na:na]
+		at java.base/sun.security.ssl.SSLSocketOutputRecord.encodeAlert(SSLSocketOutputRecord.java:82) ~[na:na]
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:400) ~[na:na]
+		... 34 common frames omitted
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:976) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1443) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1047) ~[na:na]
+	... 30 common frames omitted
+
+2021-04-20 02:03:09.258 ERROR 11964 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Load failed
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Something went wrong when looking up the track
+	at com.sedmelluq.discord.lavaplayer.tools.ExceptionTools.wrapUnfriendlyExceptions(ExceptionTools.java:44) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.dispatchItemLoadFailure(DefaultAudioPlayerManager.java:236) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:225) ~[lavaplayer-1.3.76.jar!/:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
+  lavaplayer.version: 1.3.76
+  os.arch: amd64
+  os.name: Windows 10
+  os.version: 10.0
+  java.vendor: Oracle Corporation
+  java.version: 16
+  java.runtime.version: 16+36-2231
+  java.vm.version: 16+36-2231
+Caused by: java.lang.RuntimeException: javax.net.ssl.SSLException: Connection reset
+	at com.sedmelluq.discord.lavaplayer.tools.ExceptionTools.wrapUnfriendlyExceptions(ExceptionTools.java:58) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeSearchProvider.loadSearchResult(YoutubeSearchProvider.java:74) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager$LoadingRoutes.search(YoutubeAudioSourceManager.java:262) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager$LoadingRoutes.search(YoutubeAudioSourceManager.java:228) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeLinkRouter.route(DefaultYoutubeLinkRouter.java:35) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadItemOnce(YoutubeAudioSourceManager.java:196) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadItem(YoutubeAudioSourceManager.java:131) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
+	... 4 common frames omitted
+Caused by: javax.net.ssl.SSLException: Connection reset
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:127) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:369) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:312) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:307) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1689) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1063) ~[na:na]
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeSearchProvider.loadSearchResult(YoutubeSearchProvider.java:67) ~[lavaplayer-1.3.76.jar!/:na]
+	... 12 common frames omitted
+	Suppressed: java.net.SocketException: Connection reset by peer
+		at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:420) ~[na:na]
+		at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440) ~[na:na]
+		at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:826) ~[na:na]
+		at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1045) ~[na:na]
+		at java.base/sun.security.ssl.SSLSocketOutputRecord.encodeAlert(SSLSocketOutputRecord.java:82) ~[na:na]
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:400) ~[na:na]
+		... 34 common frames omitted
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:976) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1443) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1047) ~[na:na]
+	... 30 common frames omitted
+
+2021-04-20 02:03:09.261 ERROR 11964 --- [lava-daemon-pool-info-loader-2-thread-1] l.server.player.AudioLoaderRestHandler   : Track loading failed
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Something went wrong when looking up the track
+	at com.sedmelluq.discord.lavaplayer.tools.ExceptionTools.wrapUnfriendlyExceptions(ExceptionTools.java:44) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.dispatchItemLoadFailure(DefaultAudioPlayerManager.java:236) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:225) ~[lavaplayer-1.3.76.jar!/:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
+  lavaplayer.version: 1.3.76
+  os.arch: amd64
+  os.name: Windows 10
+  os.version: 10.0
+  java.vendor: Oracle Corporation
+  java.version: 16
+  java.runtime.version: 16+36-2231
+  java.vm.version: 16+36-2231
+Caused by: java.lang.RuntimeException: javax.net.ssl.SSLException: Connection reset
+	at com.sedmelluq.discord.lavaplayer.tools.ExceptionTools.wrapUnfriendlyExceptions(ExceptionTools.java:58) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeSearchProvider.loadSearchResult(YoutubeSearchProvider.java:74) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager$LoadingRoutes.search(YoutubeAudioSourceManager.java:262) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager$LoadingRoutes.search(YoutubeAudioSourceManager.java:228) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeLinkRouter.route(DefaultYoutubeLinkRouter.java:35) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadItemOnce(YoutubeAudioSourceManager.java:196) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadItem(YoutubeAudioSourceManager.java:131) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
+	... 4 common frames omitted
+Caused by: javax.net.ssl.SSLException: Connection reset
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:127) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:369) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:312) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:307) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1689) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1063) ~[na:na]
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeSearchProvider.loadSearchResult(YoutubeSearchProvider.java:67) ~[lavaplayer-1.3.76.jar!/:na]
+	... 12 common frames omitted
+	Suppressed: java.net.SocketException: Connection reset by peer
+		at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:420) ~[na:na]
+		at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440) ~[na:na]
+		at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:826) ~[na:na]
+		at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1045) ~[na:na]
+		at java.base/sun.security.ssl.SSLSocketOutputRecord.encodeAlert(SSLSocketOutputRecord.java:82) ~[na:na]
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:400) ~[na:na]
+		... 34 common frames omitted
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:976) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1443) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1047) ~[na:na]
+	... 30 common frames omitted
+
+2021-04-20 02:03:30.478  INFO 11964 --- [XNIO-1 task-30] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:ege akman 2. dünya savaþý"
+2021-04-20 02:03:31.213  INFO 11964 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: ege akman 2. dünya savaþý
+2021-04-20 02:03:31.463  INFO 11964 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"op": "play", "guildId": "830907252302544936", "track": "QAAAgQIAHjIuIETDvG55YSBTYXZhxZ/EsSB2ZSBUw7xya2l5ZQAJRWdlIEFrbWFuAAAAAAALYhAAC3lCS04tbHFQRWhRAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9eUJLTi1scVBFaFEAB3lvdXR1YmUAAAAAAAAAAA==", "noReplace": false, "startTime": "0"}
+2021-04-20 02:03:35.693  INFO 11964 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"op": "stop", "guildId": "830907252302544936"}
+2021-04-20 02:03:35.696  INFO 11964 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"op": "destroy", "guildId": "830907252302544936"}
+2021-04-20 02:04:18.221  INFO 11964 --- [XNIO-1 task-32] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:ege akman 2. dünya savaþý"
+2021-04-20 02:04:18.490  INFO 11964 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"op": "voiceUpdate", "guildId": "830907252302544936", "sessionId": "2fb4ec0018d9c90801cf7cd9891105cc", "event": {"token": "5b9aedad6419d0a9", "guild_id": "830907252302544936", "endpoint": "eu-central6087.discord.media:443"}}
+2021-04-20 02:04:18.860  INFO 11964 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: ege akman 2. dünya savaþý
+2021-04-20 02:04:19.101  INFO 11964 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"op": "play", "guildId": "830907252302544936", "track": "QAAAgQIAHjIuIETDvG55YSBTYXZhxZ/EsSB2ZSBUw7xya2l5ZQAJRWdlIEFrbWFuAAAAAAALYhAAC3lCS04tbHFQRWhRAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9eUJLTi1scVBFaFEAB3lvdXR1YmUAAAAAAAAAAA==", "noReplace": false, "startTime": "0"}
+2021-04-20 02:04:24.169  INFO 11964 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"op": "stop", "guildId": "830907252302544936"}
+2021-04-20 02:04:24.170  INFO 11964 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"op": "destroy", "guildId": "830907252302544936"}
+2021-04-20 02:06:38.874  INFO 11964 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60967 -- CloseStatus[code=1006, reason=]
+2021-04-20 02:06:38.874  INFO 11964 --- [XNIO-1 I/O-5] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 02:06:44.378  INFO 11964 --- [XNIO-1 task-34] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60988
+2021-04-20 02:06:44.382  INFO 11964 --- [XNIO-1 task-34] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:60988
+2021-04-20 02:06:54.169  INFO 11964 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60988 -- CloseStatus[code=1006, reason=]
+2021-04-20 02:06:54.170  INFO 11964 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 02:10:53.617  INFO 11964 --- [XNIO-1 task-35] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:61018
+2021-04-20 02:10:53.620  INFO 11964 --- [XNIO-1 task-35] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:61018
+2021-04-20 02:16:10.876  INFO 11964 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:61018 -- CloseStatus[code=1006, reason=]
+2021-04-20 02:16:10.876  INFO 11964 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 02:16:18.463  INFO 11964 --- [XNIO-1 task-36] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:61051
+2021-04-20 02:16:18.467  INFO 11964 --- [XNIO-1 task-36] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:61051
+2021-04-20 02:16:50.863  INFO 11964 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:61051 -- CloseStatus[code=1006, reason=]
+2021-04-20 02:16:50.864  INFO 11964 --- [XNIO-1 I/O-5] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 02:16:56.346  INFO 11964 --- [XNIO-1 task-37] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:61058
+2021-04-20 02:16:56.352  INFO 11964 --- [XNIO-1 task-37] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:61058
+2021-04-20 02:17:23.742  INFO 11964 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:61058 -- CloseStatus[code=1006, reason=]
+2021-04-20 02:17:23.742  INFO 11964 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 02:17:30.788  INFO 11964 --- [XNIO-1 task-38] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:61066
+2021-04-20 02:17:30.791  INFO 11964 --- [XNIO-1 task-38] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:61066
+2021-04-20 02:17:49.224  INFO 11964 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:61066 -- CloseStatus[code=1006, reason=]
+2021-04-20 02:17:49.224  INFO 11964 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 02:17:54.704  INFO 11964 --- [XNIO-1 task-39] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:61073
+2021-04-20 02:17:54.708  INFO 11964 --- [XNIO-1 task-39] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:61073
+2021-04-20 02:18:36.403  INFO 11964 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:61073 -- CloseStatus[code=1006, reason=]
+2021-04-20 02:18:36.403  INFO 11964 --- [XNIO-1 I/O-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 02:18:42.224  INFO 11964 --- [XNIO-1 task-40] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:61079
+2021-04-20 02:18:42.228  INFO 11964 --- [XNIO-1 task-40] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:61079
+2021-04-20 02:25:46.892  INFO 11964 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:61079 -- CloseStatus[code=1006, reason=]
+2021-04-20 02:25:46.893  INFO 11964 --- [XNIO-1 I/O-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 02:26:03.344  INFO 11964 --- [XNIO-1 task-41] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:61130
+2021-04-20 02:26:03.350  INFO 11964 --- [XNIO-1 task-41] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:61130
+2021-04-20 02:27:15.322  INFO 11964 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:61130 -- CloseStatus[code=1006, reason=]
+2021-04-20 02:27:15.323  INFO 11964 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 02:27:20.541  INFO 11964 --- [XNIO-1 task-42] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:61138
+2021-04-20 02:27:20.546  INFO 11964 --- [XNIO-1 task-42] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:61138
+2021-04-20 02:31:01.718  INFO 11964 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:61138 -- CloseStatus[code=1006, reason=]
+2021-04-20 02:31:01.718  INFO 11964 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 02:31:21.353  INFO 11964 --- [XNIO-1 task-43] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:61163
+2021-04-20 02:31:21.360  INFO 11964 --- [XNIO-1 task-43] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:61163
+2021-04-20 02:40:43.065  INFO 11964 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:61163 -- CloseStatus[code=1006, reason=]
+2021-04-20 02:40:43.065  INFO 11964 --- [XNIO-1 I/O-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-04-20 02:40:57.547  INFO 11964 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-20 02:40:57.548  INFO 11964 --- [Thread-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2021-04-20 02:40:57.552  INFO 11964 --- [Thread-1] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
