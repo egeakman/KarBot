@@ -28,4 +28,3 @@ xkcd
 yarl
 praw
 #discord-ext-menus
-1
