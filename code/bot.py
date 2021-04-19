@@ -119,4 +119,4 @@ for filename in os.listdir("./code/cogs"):
     if filename.endswith(".py"):
         bot.load_extension(f"cogs.{filename[:-3]}")
 
-bot.run("ODMzNzAxNTQ3ODc5MTcwMTA5.YH2LEg.v4nSkE-saZhhda_ePW3N0Xvb9A0")
+bot.run("ODMzNzAxNTQ3ODc5MTcwMTA5.YH2LEg._i3yEGE3895cEr-8i3O4NvMRa2k")
