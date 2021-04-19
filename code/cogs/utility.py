@@ -2,37 +2,19 @@ import os
 import urllib
 import requests
 import io
-import ksoftapi
 import json
 from textwrap import TextWrapper
-
 import discord
 from discord.ext import commands
 
 class Utility(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.client = bot.client
-        self.kclient = bot.kclient
-        key = 'ffe283d8e3ab75a1523c013eaae15acb6423d'
 
     @commands.Cog.listener()
     async def on_ready(self):
         print("Utility is ready.")
 
-    """@commands.command(name='convert', aliases=['currency'])
-    async def currency(self, ctx, value: str="", _from: str="", to: str=""):
-        "Currency conversion"
-        if value=="" or _from=="" or to=="":
-            return await ctx.send("Please enter values in proper format\n`~convert [value] [from] [to]`\neg: `~convert 16 usd inr`")
-
-        try:
-            async with ctx.typing():
-                c = await self.kclient.kumo.currency_conversion(_from, to, value)
-        except (ksoftapi.NoResults, ksoftapi.errors.APIError):
-            await ctx.send('Conversion Failed :x:')
-        else:
-            await ctx.send(f":currency_exchange: Conversion:\n`{value} {_from.upper()}` = `{c.pretty}`")"""
 
     @commands.command(name='list')
     async def listusers(self, ctx):
@@ -44,28 +26,6 @@ class Utility(commands.Cog):
         for member in members:
             memnames.append(member.name)
         await ctx.send(f"Members in {ctx.author.voice.channel.name}:\n```\n" + "\n".join(memnames) +"\n```")
-
-    """@commands.command(name='trace', aliases=['ip'])
-    async def trace(self, ctx, ip: str=""):
-        "Trace ip"
-        if ip=="":
-            return await ctx.send("Please enter an `IP` address :satellite:")
-
-        try:
-            async with ctx.typing():
-                info = await self.kclient.kumo.trace_ip(ip)
-        except (ksoftapi.NoResults, ksoftapi.errors.APIError):
-            await ctx.send('Unable to locate :x:\nEnter valid IP')
-        else:
-            details = [['City', 'city'], ['Continent code', 'continent_code'], ['Continent name', 'continent_name'], ['Country code', 'country_code'], ['Country_name', 'country_name'], ['DMA code', 'dma_code'], ['Latitude', 'latitude'], ['Longitude', 'longitude'], ['Postal code', 'postal_code'], ['Region', 'region'], ['Timezone', 'time_zone']]
-            description = []
-            for i in details:
-                description.append(f'{i[0]}: `{getattr(info, i[1])}`')
-            description.append(f':map:Map: [GoogleMaps]({info.gmap})')
-
-            embed = discord.Embed(title=":satellite_orbital: IP information:", colour=discord.Colour(0xff00cc), description="\n".join(description))
-            embed.set_footer(text=ip, icon_url=ctx.author.avatar_url)
-            await ctx.send(embed=embed)"""
 
 
     @commands.command(name='serverinfo', aliases=['server', 'sinfo'])

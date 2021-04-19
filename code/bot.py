@@ -1,11 +1,7 @@
 import discord
-import random
 import os
 import io
-import ksoftapi
 import json
-from utils import canvas
-from aiohttp import ClientSession
 import datetime
 from discord.ext import commands, tasks
 from itertools import cycle
@@ -19,17 +15,15 @@ def get_prefix(bot, message):
 intents = discord.Intents.default()
 intents.members = True
 bot = commands.Bot(command_prefix = get_prefix, guild_subscriptions=True, intents=intents)
-status = cycle([".help", ".invite", ".prison", "My Instagram: @ege.akmn"])
+status = cycle([".help"])
 bot.uptime = datetime.datetime.now()
 bot.messages_in = bot.messages_out = 0
-bot.region = 'Paris, FR'
+bot.region = 'Istanbul, TR'
 #bot.remove_command('help')
 
 @bot.event
 async def on_ready():
     status_changer.start()
-    bot.kclient = ksoftapi.Client('eyJ0IjogImFwcCIsICJrIjogImtobWFjc2lnIiwgInBrIjogNTAzMSwgIm8iOiAiMzU4Njg5MzA5MjE1MjkzNDQzIiwgImMiOiAxMjg4OTA4MX0.68634edda967e20ab72ef2592819be182fb55965a24c4cd175895452ebc16fdd')
-    bot.client = ClientSession()
     print("Bot is ready.")
 
 @bot.event
@@ -37,7 +31,7 @@ async def on_guild_join(guild):
     with open("prefixes.json", "r") as p:
         prefixes = json.load(p)
 
-    prefixes[str(guild.id)] = "!"
+    prefixes[str(guild.id)] = "."
 
     with open("prefixes.json", "w") as p:
         json.dump(prefixes, p, indent=4)
@@ -76,10 +70,6 @@ async def on_member_remove(member):
 
     except:
         pass
-        #for channel in member.guild.text_channels:
-            #if channel.permissions_for(member.guild.me).send_messages:
-                #await channel.send(f"Why did you leave :pensive:  {member.mention} I'll miss you...")
-                #break
 
 
 @bot.event
@@ -89,7 +79,7 @@ async def on_message(message):
         if hasattr(bot, 'messages_out'):
             bot.messages_out += 1
     # Received message (Count only commands messages)
-    elif message.content.startswith('.'):
+    elif message.content.startswith(get_prefix(bot, message)):
         if hasattr(bot, 'messages_in'):
             bot.messages_in += 1
 
@@ -129,4 +119,4 @@ for filename in os.listdir("./code/cogs"):
     if filename.endswith(".py"):
         bot.load_extension(f"cogs.{filename[:-3]}")
 
-bot.run("NzkyNDYzNzI3MjUyNjAyODkw.X-eFWw.t5chVRrkAZXH7Dr9v7aRhZhHBok")
+bot.run("ODMzNzAxNTQ3ODc5MTcwMTA5.YH2LEg.v4nSkE-saZhhda_ePW3N0Xvb9A0")

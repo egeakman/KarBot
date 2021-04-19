@@ -15,7 +15,7 @@ class Settings(commands.Cog):
 
     @commands.command()
     @commands.has_permissions(administrator=True)
-    async def prefix(self, ctx, prefix):
+    async def prefix(self, ctx, *,prefix):
         with open("prefixes.json", "r") as p:
             prefixes = json.load(p)
 

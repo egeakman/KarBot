@@ -17,8 +17,8 @@ class Info(commands.Cog):
 
         avatar_url = str(self.bot.user.avatar_url)
         embed.set_thumbnail(url=avatar_url)
-        embed.set_author(name="Eg-Bot Help", url="https://discord.com/api/oauth2/authorize?client_id=792463727252602890&permissions=8&scope=bot", icon_url=avatar_url)
-        embed.set_footer(text="Eg-Bot by ege.akmn#1881✨")
+        embed.set_author(name="KarBot Help", url="https://discord.com/api/oauth2/authorize?client_id=792463727252602890&permissions=8&scope=bot", icon_url=avatar_url)
+        embed.set_footer(text="KarBot by ege.akmn#1881✨")
 
         if arg.strip().lower() == '-a':
             # Full version
@@ -45,12 +45,7 @@ class Info(commands.Cog):
     @commands.command(name='invite', aliases=["ınvıte", "invıte", "ınvite", "INVITE", "İNVİTE", "INVİTE", "İNVITE", "Invite"])
     async def invite(self, ctx):
         """My invite link"""
-        await ctx.send("To invite **Eg-Bot** to your server, visit: **https://cutt.ly/kjUKwu7**")
-
-    @commands.command(name='prison', aliases=["Prison", "prıson", "Prıson", "PRISON", "PRİSON"])
-    async def prison(self, ctx):
-        """My help server"""
-        await ctx.send("To join **Eg-Bot** 's help server, visit: **https://discord.io/prison-server**")
+        await ctx.send(f"To invite **KarBot** to your server, visit: ****")
 
     @commands.command(name='support', aliases=['contact', 'owner'])
     async def support(self, ctx, *, msg: str = ""):
@@ -69,7 +64,7 @@ class Info(commands.Cog):
     @commands.command(aliases=["WHOAREYOU", "Whoareyou", "ınfo", "INFO", "İNFO","whoareyou"])
     async def info(self, ctx):
         user = ctx.message.author
-        await ctx.send(f"Hey {user.mention}! I'm Eg-Bot and going to be a moderator, musician and an entertainer. But I'm still learning :books:")
+        await ctx.send(f"Hey {user.mention}! I'm KarBot and going to be a moderator, musician and an entertainer. But I'm still learning :books:")
 
 
 def setup(bot):

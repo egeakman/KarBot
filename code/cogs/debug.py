@@ -90,6 +90,7 @@ class Debug(commands.Cog):
 
 
     @commands.command(name='py', aliases=['eval'])
+    @commands.check(this_should_be_me)
     async def _eval(self, ctx, *, body):
         """Evaluates python code"""
         env = {
@@ -182,7 +183,7 @@ class Debug(commands.Cog):
     async def announce(self, ctx, *, message):
         for guild in self.bot.guilds:
             try:
-                embed = discord.Embed(title="Eg-Bot Announcement",colour = discord.Colour.green())
+                embed = discord.Embed(title="KarBot Announcement",colour = discord.Colour.green())
                 embed.add_field(name = "**From Developer:**",value = ctx.message.author.name, inline=True)
                 embed.add_field(name="**Message:**",value=message, inline=False)
                 embed.set_image(url="https://i.ibb.co/JK1z40M/a51b83cb114408930389ecd8f5412a9d.png")
@@ -191,7 +192,7 @@ class Debug(commands.Cog):
             except:
                 for channel in guild.text_channels:
                     if channel.permissions_for(guild.me).send_messages:
-                        embed = discord.Embed(title="Eg-Bot Announcement",colour = discord.Colour.green())
+                        embed = discord.Embed(title="KarBot Announcement",colour = discord.Colour.green())
                         embed.add_field(name = "**From Developer:**",value = ctx.message.author.name, inline=True)
                         embed.add_field(name="**Message:**",value=message, inline=False)
                         embed.set_image(url="https://i.ibb.co/JK1z40M/a51b83cb114408930389ecd8f5412a9d.png")
@@ -209,7 +210,7 @@ class Debug(commands.Cog):
 
         for member in self.bot.get_all_members():
             try:
-                embed = discord.Embed(title="Eg-Bot Announcement",colour = discord.Colour.green())
+                embed = discord.Embed(title="KarBot Announcement",colour = discord.Colour.green())
                 embed.add_field(name = "**From Developer:**",value = author.name, inline=True)
                 embed.add_field(name="**Message:**",value = output, inline=False)
                 embed.set_thumbnail(url="https://i.ibb.co/JK1z40M/a51b83cb114408930389ecd8f5412a9d.png")
@@ -229,7 +230,7 @@ class Debug(commands.Cog):
             await ctx.send("Message sent :white_check_mark:")
 
         except:
-            await ctx.send("Failure :x:")
+            await ctx.send("Failed :x:")
 
 def setup(bot):
     bot.add_cog(Debug(bot))
