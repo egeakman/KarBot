@@ -23,7 +23,18 @@ class Fun(commands.Cog):
     async def whoisthebest(self,ctx):
         """Shows who is the best."""
         await ctx.send(f"Of course {ctx.author.mention}!!")
+    @commands.command()
+    async def napim(self,ctx):
 
+
+        random_sj=["ooo hawli", "reis bu ağırdı :flushed:", "sjsjsjsj", "kardeşim soktun lafı", "komki", "e-eritin...",
+        "https://tenor.com/view/napim-otuzbir-mizaj-gif-19220089",
+        "https://tenor.com/view/napim-gif-21127885",
+        "https://tenor.com/view/napim-mizah-mizaj-cool-gif-19273345",
+        "https://tenor.com/view/napimbugrabasgan-napim-bugrabasgan-bugra-gif-19548224",
+        "https://tenor.com/view/napim-napim1-napim2-napim3-gif-20093240",
+        "https://tenor.com/view/napim-gif-20052788"]
+        await ctx.send(random.choice(random_sj))
     @commands.command()
     async def punch(self,ctx,member:discord.Member):
         """Punch someone you mention."""
