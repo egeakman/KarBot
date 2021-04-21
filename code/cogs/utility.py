@@ -29,6 +29,7 @@ class Utility(commands.Cog):
         for member in members:
             memnames.append(member.name)
         await ctx.send(f"Members in {ctx.author.voice.channel.name}:\n```\n" + "\n".join(memnames) +"\n```")
+
     @commands.command()
     async def search(self,ctx,*,message):
         """Searches the content on wikipedia and shows results."""
@@ -38,6 +39,7 @@ class Utility(commands.Cog):
                 await ctx.send(embed=embed)
             except:
                 await ctx.send("The content you tried to search could not be found.")
+
     @commands.command()
     async def covid19(self,ctx,country=None):
         """Shows the current Covid 19 datas."""
@@ -48,9 +50,7 @@ class Utility(commands.Cog):
             embed.add_field(name="Case",value=data["confirmed"],inline=False)
             embed.add_field(name="Death",value=data["deaths"],inline=False)
 
-
         else:
-
             locationdata=covid19.getLocationByCountryCode(country)
 
             embed=discord.Embed(description=f"{country} Covid 19 Datas",color=0xff0000)
@@ -128,11 +128,7 @@ class Utility(commands.Cog):
         if not text:
             return await ctx.send('Specify message to send')
         await ctx.send(content=text, tts=True)
-    @commands.command(hidden=True)
-    async def shutdown(self,ctx):
-        if (ctx.author.id == 579592895380586496 or ctx.author.id == 358689309215293443):
-            await ctx.send("Done!")
-            eval(exit())
+
     @commands.command()
     async def translate(self,ctx,dil,*,message):
         """Translates."""
@@ -200,6 +196,7 @@ class Utility(commands.Cog):
             await ctx.send(embed=em)
         except Exception:
             await ctx.send("I don't have permission to send embeds here :disappointed_relieved:")
+
     @translate.error
     async def çevir_error(self,ctx,error):
         await ctx.send("An error occured. Example: ?translate tr How are you?")

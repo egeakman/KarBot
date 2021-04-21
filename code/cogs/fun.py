@@ -56,11 +56,11 @@ class Fun(commands.Cog):
         if ctx.author.id ==member.id:
             emb = discord.Embed(description="**Everything will be okay. I promise, I will never leave you :pleading_face:**",color=0xff0000)
 
-
         else:
             emb = discord.Embed(description="**" + ctx.author.mention +" killed {0.mention}**".format(member),color=0xff0000)
             emb.set_image(url="https://media.tenor.com/images/3d68ffaf557461c2e1a30d3e587a73e5/tenor.gif")
         await ctx.send(embed=emb)
+
 
     @commands.command(aliases=["roll-dice", "roll"])
     async def dice(self,ctx):
@@ -139,7 +139,7 @@ class Fun(commands.Cog):
         if ctx.author.id==member.id:
             async with request("GET",url,headers={}) as response:
                 data = await response.json()
-                embed = discord.Embed(description=f"**{ctx.author.mention}, Ar-Bot hugged you.**",color=0xff0000)
+                embed = discord.Embed(description=f"**{ctx.author.mention}, KarBot hugged you.**",color=0xff0000)
                 embed.set_image(url=data["link"])
                 await ctx.send(f"**{ctx.author.mention}, I'm by your side.**")
 

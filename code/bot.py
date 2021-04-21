@@ -12,7 +12,7 @@ def get_prefix(bot, message):
 
     return prefixes[str(message.guild.id)]
 
-intents = discord.Intents.default()
+intents = discord.Intents(messages=True,guilds = True,reactions = True,members = True,presences = True)
 intents.members = True
 bot = commands.Bot(command_prefix = get_prefix, guild_subscriptions=True, intents=intents)
 status = cycle([".help"])
@@ -98,8 +98,7 @@ async def on_command_error(ctx, error):
 
 
 def this_should_be_me(ctx):
-    return ctx.author.id == 579592895380586496
-
+    return ctx.author.id == 579592895380586496 or ctx.author.id == 358689309215293443
 
 
 @bot.command(hidden=True)
@@ -114,8 +113,6 @@ async def load(ctx, extension):
 async def unload(ctx, extension):
     bot.unload_extension(f"cogs.{extension}")
     await ctx.send("Done!")
-
-
 
 
 for filename in os.listdir("./code/cogs"):
