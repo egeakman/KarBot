@@ -97,7 +97,7 @@ async def on_command_error(ctx, error):
 
 
 def this_should_be_me(ctx):
-    return ctx.author.id == 358689309215293443
+    return ctx.author.id == 579592895380586496 or ctx.author.id == 358689309215293443
 
 
 @bot.command(hidden=True)
