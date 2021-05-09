@@ -323,16 +323,16 @@ class Fun(commands.Cog):
     async def whoami(self, ctx):
         await ctx.send("ROOT :robot:")
 
-    @commands.command()
+    @commands.command(hidden=True)
     async def uname(self, ctx):
         await ctx.send("Thought you could hack me?")
 
-    @commands.command()
+    @commands.command(hidden=True)
     async def cd(self, ctx):
         await ctx.send("Why are ya messing with ma directories bro??")
 
 
-    @commands.command(name="31",aliases=["osbi", "otuz bir", "ozbi", "otuzbir"])
+    @commands.command(hidden=True,name="31",aliases=["osbi", "otuz bir", "ozbi", "otuzbir"])
     async def _31(self, ctx):
 
         random_sj=["sj", "sjsj", "sjsjsjsj", "NE DİYO BU CHAT???", "sen demek osbi", "mizah tufanı",

@@ -12,8 +12,7 @@ def get_prefix(bot, message):
 
     return prefixes[str(message.guild.id)]
 
-intents = discord.Intents.default()
-intents.members = True
+intents = discord.Intents(messages=True,guilds = True,reactions = True,members = True,presences = True)
 bot = commands.Bot(command_prefix = get_prefix, guild_subscriptions=True, intents=intents)
 status = cycle([".help"])
 bot.uptime = datetime.datetime.now()
@@ -66,7 +65,7 @@ async def on_member_join(member):
 @bot.event
 async def on_member_remove(member):
     try:
-        await member.guild.system_channel.send(f"Why did you leave :pensive:  {member.mention} I'll miss you...")
+        await member.guild.system_channel.send(f"Why did you leave :pensive:  {member.display_name} I'll miss you...")
 
     except:
         pass
@@ -119,4 +118,4 @@ for filename in os.listdir("./code/cogs"):
     if filename.endswith(".py"):
         bot.load_extension(f"cogs.{filename[:-3]}")
 
-bot.run("ODMzNzAxNTQ3ODc5MTcwMTA5.YH2LEg.v4nSkE-saZhhda_ePW3N0Xvb9A0")
+bot.run("ODMzNzAxNTQ3ODc5MTcwMTA5.YH2LEg.SNXnObiCyJSNT_WiIZ6lGXvVCFo")

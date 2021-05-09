@@ -96,53 +96,19 @@ class Utility(commands.Cog):
         await ctx.send(content=text, tts=True)
 
     @commands.command(name = 'userinfo', aliases=['user', 'uinfo', 'ui'])
-    async def userinfo(self, ctx, *, name=""):
-        """Get user info. Ex: .user @user"""
-        if name:
-            try:
-                user = ctx.message.mentions[0]
-            except IndexError:
-                user = ctx.guild.get_member_named(name)
-            try:
-                if not user:
-                    user = ctx.guild.get_member(int(name))
-                if not user:
-                    user = self.bot.get_user(int(name))
-            except ValueError:
-                pass
-            if not user:
-                await ctx.send('User not found :man_frowning_tone1:')
-                return
-        else:
-            user = ctx.message.author
-
-        if isinstance(user, discord.Member):
-            role = user.top_role.name
-            if role == "@everyone":
-                role = "N/A"
-            voice_state = None if not user.voice else user.voice.channel
-
-        em = discord.Embed(title="User Info", colour=0x00CC99)
-        em.add_field(name=':id: User ID', value=f'**`{user.id}`**')
-        if isinstance(user, discord.Member):
-            if isinstance(user.activity, discord.Spotify):
-                activity = "Listening " + user.activity.title
-            elif user.activity is not None:
-                activity = str(user.activity.type)[13:].title() + ' ' + user.activity.name
-            else:
-                activity = None
-
-            em.add_field(name=':bust_in_silhouette: Nick', value=f'**`{user.nick}`**')
-            em.add_field(name=':chart_with_upwards_trend: Status', value=f'**`{user.status}`**')
-            em.add_field(name=':loud_sound: In Voice', value=f'**`{voice_state}`**')
-            em.add_field(name=':man_mage: Activity', value=f'**`{activity}`**')
-            em.add_field(name=':man_police_officer: Highest Role', value=f'**`{role}`**')
-        em.add_field(name=':alarm_clock: Account Created', value=f"**`{user.created_at.__format__('%A, %d %B %Y @ %H:%M:%S')}`**", inline=False)
-        if isinstance(user, discord.Member):
-            em.add_field(name=':inbox_tray: Join Date', value=f"**`{user.joined_at.__format__('%A, %d %B %Y @ %H:%M:%S')}`**", inline=False)
-        em.set_thumbnail(url=user.avatar_url)
-        em.set_author(name=user, icon_url=user.avatar_url)
-
+    async def userinfo(self, ctx, member:discord.Member):
+        em=discord.Embed(title="User Info", colour=0x00CC99)
+        em.add_field(name=':id: User ID', value=f'**`{member.id}`**')
+        em.add_field(name=':bust_in_silhouette: Nick Name', value=f'**`{member.nick}`**')
+        em.add_field(name=':chart_with_upwards_trend: Status', value=f'**`{member.status}`**')
+        em.add_field(name=':loud_sound: In Voice', value=f'**`{member.voice.channel}`**')
+        em.add_field(name=':man_mage: Activity', value=f'**`{member.activity}`**')
+        em.add_field(name=':man_police_officer: Highest Role', value=f'**`{member.top_role}`**')
+        em.add_field(name=':alarm_clock: Account Created', value=f"**`{member.created_at.__format__('%A, %d %B %Y @ %H:%M:%S')}`**", inline=False)
+        if isinstance(member, discord.Member):
+            em.add_field(name=':inbox_tray: Join Date', value=f"**`{member.joined_at.__format__('%A, %d %B %Y @ %H:%M:%S')}`**", inline=False)
+        em.set_thumbnail(url=member.avatar_url)
+        em.set_author(name=member, icon_url=member.avatar_url)
         try:
             await ctx.send(embed=em)
         except Exception:
