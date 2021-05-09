@@ -146,11 +146,16 @@ class Utility(commands.Cog):
 
     @commands.command(name = 'userinfo', aliases=['user', 'uinfo', 'ui'])
     async def userinfo(self, ctx, member:discord.Member):
+        """Get User Info"""
+        voice = None if not member.voice else member.voice.channel
+        member_name = member.display_name if member.nick == None else member.nick
+
         em=discord.Embed(title="User Info", colour=0x00CC99)
+
         em.add_field(name=':id: User ID', value=f'**`{member.id}`**')
-        em.add_field(name=':bust_in_silhouette: Nick Name', value=f'**`{member.nick}`**')
+        em.add_field(name=':bust_in_silhouette: Nick Name', value=f'**`{member_name}`**')
         em.add_field(name=':chart_with_upwards_trend: Status', value=f'**`{member.status}`**')
-        em.add_field(name=':loud_sound: In Voice', value=f'**`{member.voice.channel}`**')
+        em.add_field(name=':loud_sound: In Voice', value=f'**`{voice}`**')
         em.add_field(name=':man_mage: Activity', value=f'**`{member.activity}`**')
         em.add_field(name=':man_police_officer: Highest Role', value=f'**`{member.top_role}`**')
         em.add_field(name=':alarm_clock: Account Created', value=f"**`{member.created_at.__format__('%A, %d %B %Y @ %H:%M:%S')}`**", inline=False)
