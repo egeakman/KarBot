@@ -232,5 +232,12 @@ class Debug(commands.Cog):
         except:
             await ctx.send("Failed :x:")
 
+
+    @commands.command(hidden=True)
+    async def shutdown(self,ctx):
+        if (ctx.author.id == 579592895380586496 or ctx.author.id == 358689309215293443):
+            await ctx.send("Done!")
+            eval(exit())
+
 def setup(bot):
     bot.add_cog(Debug(bot))

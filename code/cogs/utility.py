@@ -4,10 +4,13 @@ import requests
 import io
 import json
 from textwrap import TextWrapper
+
+from requests.models import Response
 import discord
 from discord.ext import commands
 import COVID19Py
 from textblob import TextBlob
+import requests
 import wikipedia
 
 class Utility(commands.Cog):
@@ -29,6 +32,7 @@ class Utility(commands.Cog):
         for member in members:
             memnames.append(member.name)
         await ctx.send(f"Members in {ctx.author.voice.channel.name}:\n```\n" + "\n".join(memnames) +"\n```")
+
     @commands.command()
     async def search(self,ctx,*,message):
         """Searches the content on wikipedia and shows results."""
@@ -38,6 +42,7 @@ class Utility(commands.Cog):
                 await ctx.send(embed=embed)
             except:
                 await ctx.send("The content you tried to search could not be found.")
+
     @commands.command()
     async def covid19(self,ctx,country=None):
         """Shows the current Covid 19 datas."""
@@ -48,9 +53,7 @@ class Utility(commands.Cog):
             embed.add_field(name="Case",value=data["confirmed"],inline=False)
             embed.add_field(name="Death",value=data["deaths"],inline=False)
 
-
         else:
-
             locationdata=covid19.getLocationByCountryCode(country)
 
             embed=discord.Embed(description=f"{country} Covid 19 Datas",color=0xff0000)
@@ -61,6 +64,20 @@ class Utility(commands.Cog):
 
             embed.add_field(name="For all country shortcuts",value="[**Click**](https://www.itkib.org.tr/tr/bilgi-merkezi-dis-ticaret-ihracat-rehberi-ulke-kodlari.html)",inline=False)
         await ctx.send(embed=embed)
+
+    @commands.command(name="currency")
+    async def currency(self, ctx, ilkpara=None, sonpara=None, miktar=1):
+        try:
+            url="http://api.frankfurter.app/latest?from="
+
+            response = requests.get(url+ilkpara)
+
+            jsonverisi = json.loads(response.text)
+            son_veri=str(jsonverisi["rates"][sonpara] * int(miktar))
+            await ctx.send(f"{miktar} {ilkpara}: {son_veri[0:5]} {sonpara}")
+        except:
+            pass
+
 
     @commands.command(name='serverinfo', aliases=['server', 'sinfo'])
     async def serverinfo(self, ctx):
@@ -128,11 +145,7 @@ class Utility(commands.Cog):
         if not text:
             return await ctx.send('Specify message to send')
         await ctx.send(content=text, tts=True)
-    @commands.command(hidden=True)
-    async def shutdown(self,ctx):
-        if (ctx.author.id == 579592895380586496 or ctx.author.id == 358689309215293443):
-            await ctx.send("Done!")
-            eval(exit())
+
     @commands.command()
     async def translate(self,ctx,dil,*,message):
         """Translates."""
@@ -149,57 +162,29 @@ class Utility(commands.Cog):
         await ctx.send(embed=embed)
 
     @commands.command(name = 'userinfo', aliases=['user', 'uinfo', 'ui'])
-    async def userinfo(self, ctx, *, name=""):
-        """Get user info. Ex: .user @user"""
-        if name:
-            try:
-                user = ctx.message.mentions[0]
-            except IndexError:
-                user = ctx.guild.get_member_named(name)
-            try:
-                if not user:
-                    user = ctx.guild.get_member(int(name))
-                if not user:
-                    user = self.bot.get_user(int(name))
-            except ValueError:
-                pass
-            if not user:
-                await ctx.send('User not found :man_frowning_tone1:')
-                return
-        else:
-            user = ctx.message.author
+    async def userinfo(self, ctx, member:discord.Member):
+        """Get User Info"""
+        voice = None if not member.voice else member.voice.channel
+        member_name = member.display_name if member.nick == None else member.nick
 
-        if isinstance(user, discord.Member):
-            role = user.top_role.name
-            if role == "@everyone":
-                role = "N/A"
-            voice_state = None if not user.voice else user.voice.channel
+        em=discord.Embed(title="User Info", colour=0x00CC99)
 
-        em = discord.Embed(title="User Info", colour=0x00CC99)
-        em.add_field(name=':id: User ID', value=f'**`{user.id}`**')
-        if isinstance(user, discord.Member):
-            if isinstance(user.activity, discord.Spotify):
-                activity = "Listening " + user.activity.title
-            elif user.activity is not None:
-                activity = str(user.activity.type)[13:].title() + ' ' + user.activity.name
-            else:
-                activity = None
-
-            em.add_field(name=':bust_in_silhouette: Nick', value=f'**`{user.nick}`**')
-            em.add_field(name=':chart_with_upwards_trend: Status', value=f'**`{user.status}`**')
-            em.add_field(name=':loud_sound: In Voice', value=f'**`{voice_state}`**')
-            em.add_field(name=':man_mage: Activity', value=f'**`{activity}`**')
-            em.add_field(name=':man_police_officer: Highest Role', value=f'**`{role}`**')
-        em.add_field(name=':alarm_clock: Account Created', value=f"**`{user.created_at.__format__('%A, %d %B %Y @ %H:%M:%S')}`**", inline=False)
-        if isinstance(user, discord.Member):
-            em.add_field(name=':inbox_tray: Join Date', value=f"**`{user.joined_at.__format__('%A, %d %B %Y @ %H:%M:%S')}`**", inline=False)
-        em.set_thumbnail(url=user.avatar_url)
-        em.set_author(name=user, icon_url=user.avatar_url)
-
+        em.add_field(name=':id: User ID', value=f'**`{member.id}`**')
+        em.add_field(name=':bust_in_silhouette: Nick Name', value=f'**`{member_name}`**')
+        em.add_field(name=':chart_with_upwards_trend: Status', value=f'**`{member.status}`**')
+        em.add_field(name=':loud_sound: In Voice', value=f'**`{voice}`**')
+        em.add_field(name=':man_mage: Activity', value=f'**`{member.activity}`**')
+        em.add_field(name=':man_police_officer: Highest Role', value=f'**`{member.top_role}`**')
+        em.add_field(name=':alarm_clock: Account Created', value=f"**`{member.created_at.__format__('%A, %d %B %Y @ %H:%M:%S')}`**", inline=False)
+        if isinstance(member, discord.Member):
+            em.add_field(name=':inbox_tray: Join Date', value=f"**`{member.joined_at.__format__('%A, %d %B %Y @ %H:%M:%S')}`**", inline=False)
+        em.set_thumbnail(url=member.avatar_url)
+        em.set_author(name=member, icon_url=member.avatar_url)
         try:
             await ctx.send(embed=em)
         except Exception:
             await ctx.send("I don't have permission to send embeds here :disappointed_relieved:")
+
     @translate.error
     async def çevir_error(self,ctx,error):
         await ctx.send("An error occured. Example: ?translate tr How are you?")

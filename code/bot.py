@@ -12,8 +12,7 @@ def get_prefix(bot, message):
 
     return prefixes[str(message.guild.id)]
 
-intents = discord.Intents.default()
-intents.members = True
+intents = discord.Intents(messages=True,guilds = True,reactions = True,members = True,presences = True)
 bot = commands.Bot(command_prefix = get_prefix, guild_subscriptions=True, intents=intents)
 status = cycle([".help"])
 bot.uptime = datetime.datetime.now()
@@ -66,7 +65,7 @@ async def on_member_join(member):
 @bot.event
 async def on_member_remove(member):
     try:
-        await member.guild.system_channel.send(f"Why did you leave :pensive:  {member.mention} I'll miss you...")
+        await member.guild.system_channel.send(f"Why did you leave :pensive:  {member.display_name} I'll miss you...")
 
     except:
         pass
@@ -98,8 +97,7 @@ async def on_command_error(ctx, error):
 
 
 def this_should_be_me(ctx):
-    return ctx.author.id == 579592895380586496
-
+    return ctx.author.id == 579592895380586496 or ctx.author.id == 358689309215293443
 
 
 @bot.command(hidden=True)
@@ -116,10 +114,8 @@ async def unload(ctx, extension):
     await ctx.send("Done!")
 
 
-
-
 for filename in os.listdir("./code/cogs"):
     if filename.endswith(".py"):
         bot.load_extension(f"cogs.{filename[:-3]}")
 
-bot.run("ODMzNzAxNTQ3ODc5MTcwMTA5.YH2LEg._i3yEGE3895cEr-8i3O4NvMRa2k")
+bot.run("ODMzNzAxNTQ3ODc5MTcwMTA5.YH2LEg.SNXnObiCyJSNT_WiIZ6lGXvVCFo")
