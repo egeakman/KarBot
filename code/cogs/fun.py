@@ -4,6 +4,7 @@ import io
 from PIL import Image
 from io import BytesIO
 import json
+from discord.ext.commands.core import has_permissions
 import xkcd
 import requests
 from aiohttp import request
@@ -54,7 +55,7 @@ class Fun(commands.Cog):
     async def kill(self,ctx,member:discord.Member):
         """Kill someone you mention."""
         if ctx.author.id ==member.id:
-            emb = discord.Embed(description="**Everything will be okay. I promise, I will never leave you :pleading_face:**",color=0xff0000)
+            emb = discord.Embed(description="**Everything will be okay. I promise :pleading_face:**",color=0xff0000)
 
         else:
             emb = discord.Embed(description="**" + ctx.author.mention +" killed {0.mention}**".format(member),color=0xff0000)
@@ -172,7 +173,7 @@ class Fun(commands.Cog):
             url = "https://some-random-api.ml/animu/pat"
             async with request("GET",url,headers={}) as response:
                 data = await response.json()
-                embed=discord.Embed(description=f"**Don't worry. Ar-Bot patted {member.mention}**")
+                embed=discord.Embed(description=f"**Don't worry. KarBot patted {member.mention}**")
                 embed.set_image(url=data["link"])
 
         else:
