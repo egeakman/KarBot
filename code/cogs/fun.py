@@ -24,7 +24,7 @@ class Fun(commands.Cog):
     async def whoisthebest(self,ctx):
         """Shows who is the best."""
         await ctx.send(f"Of course {ctx.author.mention}!!")
-    @commands.command()
+    @commands.command(hidden=True)
     async def napim(self,ctx):
 
 
@@ -50,7 +50,14 @@ class Fun(commands.Cog):
             emb.set_image(url="https://media.tenor.com/images/5dd7bacf7f4839d2487606b947441021/tenor.gif")
         await ctx.send(embed=emb)
 
-
+    @commands.command()
+    async def revive(self,ctx,member:discord.Member):
+        if ctx.author.id==member.id:
+            await ctx.send(f"**{ctx.author.mention} You can't revive yourself... Ask someone else.**")
+        else:
+            emb=discord.Embed(description=F"** {member.mention}, {ctx.author.mention} revived you!!**")
+            emb.set_image(url="https://im5.ezgif.com/tmp/ezgif-5-83c424706dd6.gif")
+            await ctx.send(embed=emb)
     @commands.command()
     async def kill(self,ctx,member:discord.Member):
         """Kill someone you mention."""
